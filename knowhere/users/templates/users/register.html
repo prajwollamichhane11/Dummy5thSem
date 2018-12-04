@@ -1,0 +1,15 @@
+{% extends 'dummydata/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class = "container">
+	<form action= "#" method = "POST">
+		{% csrf_token %}
+		<h1>SIGN UP</h1>
+		{{form|crispy}}
+		<div class = "form-group">
+			<button  class="btn btn-primary" type = "submit">Sign UP</button>
+		</div>
+	</form>
+	<a href= "{% url 'log_in' %}">Already have an account?</a>
+</div>
+{% endblock %}

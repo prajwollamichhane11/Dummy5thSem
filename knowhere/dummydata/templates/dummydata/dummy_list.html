@@ -1,0 +1,9 @@
+{% extends 'dummydata/base.html' %}
+
+{% block content %}
+	{% for dummy in dummy_data_list %}
+		{{dummy.name}}
+		{{dummy.date}}
+		<br>
+	{% endfor %}
+{% endblock %}
