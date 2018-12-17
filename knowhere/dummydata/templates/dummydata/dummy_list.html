@@ -2,8 +2,8 @@
 
 {% block content %}
 	{% for dummy in dummy_data_list %}
-		{{dummy.name}}
+		<a href = "{% url 'detail_view' dummy.id %}">{{dummy.name}}</a>
 		{{dummy.date}}
-		<br>
+		<hr>
 	{% endfor %}
 {% endblock %}
